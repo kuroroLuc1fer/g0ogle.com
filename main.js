@@ -2,7 +2,7 @@
 //  Initialisation
 // =====================================
 // ANNULER CLIQUE (RÉUSSITE du challenge)
-    const flag = "dark4rmy{BON_REFLEXE}";
+    const flag = "dark4rmy{BON_REFLEXE_HEIN}";
 function updatetext() {
   const input_element = document.getElementById("email_input");
   
@@ -128,3 +128,4 @@ function showFlag() {
     }
     alert(`Voici la reponse : ${flag}`);
 }
+
